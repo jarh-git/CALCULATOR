@@ -1,0 +1,279 @@
+/* General */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo del encabezado */
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(135deg, #4CAF50 25%, #81C784 25%, #81C784 50%, #4CAF50 50%, #4CAF50 75%, #81C784 75%, #81C784 100%); /* Crea un fondo con un prisma verde */
+  width: 100%;
+  height: 80px;
+  position: fixed; /* Fija el encabezado en la parte superior */
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 15px;
+  border-bottom: #000000;
+}
+
+.header-section {
+  flex: 1;
+  text-align: center;
+  
+}
+
+.header-icon {
+  margin-top: 17px;
+  max-width: 50px; /* Ajusta el tamaño de las imágenes */
+  max-height: 50px;
+  border-radius: 2%;
+}
+a{
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Hace que el color sea el mismo que el del texto normal */
+  font-family: cursive;
+
+
+}
+.icon-label {
+  font-size: 15px; /* Tamaño de texto debajo de la imagen */
+  color: #000000; /* Color del texto */
+  margin-top: 5px; /* Espaciado entre la imagen y el texto */
+}
+
+.title-carousel{
+  text-align: center;
+  font-size:4vh;
+  font-family: cursive;
+}
+
+@media screen and (min-width:490px) {
+  .title-carousel{
+    font-size:8vh;
+  }
+}
+.title-text{
+  text-align: center;
+  font-family: cursive;
+  border-color: #000000;
+  font-size: 15px;
+  border: 5px solid;
+}
+@media screen and (min-width:600px) {
+  .title-text{
+    text-align: center;
+    font-family: cursive;
+    border-color: #000000;
+    font-size: 30px;
+    border: 5px solid;
+  }
+}
+/* Espaciado para el contenido principal debajo del encabezado */
+.calculator {
+  margin-top: 20vh; /* Asegura espacio debajo del encabezado */
+  margin-bottom: 30px;
+  max-width: 200px;
+  max-height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: #838383bd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.568);
+}
+
+/* Pantalla de la calculadora */
+.screen {
+  width: 90%;
+  height: 50%;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  text-align: right;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Botones de la calculadora */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  gap: 5px;
+}
+
+.button {
+  padding: 7px;
+  font-size: 1.2em;
+  background-color: #eeeeee; /* Color de los botones */
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0b7dda;
+}
+
+.advanced {
+  background-color: #f0e658; /* Diferente color para funciones avanzadas */
+}
+
+.advanced:hover {
+  background-color: #dfffa2;
+}
+
+.equal {
+  background-color: #4CAF50; /* Botón igual */
+}
+
+.equal:hover {
+  background-color: #45a049;
+}
+
+.clear {
+  background-color: #3700cee3; /* Botón clear */
+}
+
+.clear:hover {
+  background-color: #e53935;
+}
+
+@media screen and (min-width:750px) {
+  .calculator {
+    max-width: 400px;
+    max-height: 500px;
+
+  }
+  
+  /* Pantalla de la calculadora */
+  .screen {
+    width: 94%;
+    height: 70px;
+  }
+  
+  /* Botones de la calculadora */
+  .buttons {
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 5px;
+
+  }
+  
+  .button {
+    padding: 15px;
+  }
+  
+}
+@media screen and (min-width:1000px) {
+  .calculator {
+    max-width: 600px;
+  }
+  
+  /* Pantalla de la calculadora */
+  .screen {
+    width: 95%;
+    height: 100px;
+  }
+  
+  /* Botones de la calculadora */
+  .buttons {
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  }
+  
+}
+
+@media screen and (min-width:1200px) {
+  .calculator {
+    max-width: 800px;
+  }
+  
+  /* Pantalla de la calculadora */
+  .screen {
+    width: 95%;
+    height: 100px;
+  }
+  
+  /* Botones de la calculadora */
+  .buttons {
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  }
+  
+}
+/* Estilo del carrusel */
+.carousel {
+  position: relative;
+  width: 75%;
+  max-height: 100%;
+  height: auto;
+  margin: auto;
+  overflow: hidden; /* Oculta las imágenes fuera del área visible */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  border:#0b7dda solid;
+}
+@media screen and (min-width:1000px){
+  .carousel {
+    width: 45%;
+  }
+}
+.carousel-images {
+  display: flex; /* Las imágenes estarán alineadas horizontalmente */
+  transition: transform 0.5s ease-in-out; /* Suaviza la transición */
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0; /* Impide que las imágenes se reduzcan */
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+@media screen and (max-width:420px) {
+
+  .icon-label {
+    font-size: 0px; /* Tamaño de texto debajo de la imagen */
+    color: #000000; /* Color del texto */
+    margin-top: 2px; /* Espaciado entre la imagen y el texto */
+  }
+}
+
+/* Estilos para el footer */
+.footer {
+  position: block; /* Fija el footer en la parte inferior de la ventana */
+  bottom: 0; /* Alinea el footer al borde inferior */
+  width: 100%; /* Hace que el footer ocupe todo el ancho de la ventana */
+  background: linear-gradient(135deg, #4CAF50 25%, #81C784 25%, #81C784 50%, #4CAF50 50%, #4CAF50 75%, #81C784 75%, #81C784 100%); /* Crea un fondo con un prisma verde */
+  color: white; /* Texto de color blanco */
+  text-align: center; /* Centra el texto */
+  padding: 10px 0; /* Añade espacio arriba y abajo del texto */
+}
+
+.footer-content {
+  width: 100%; /* El contenido ocupa todo el ancho del footer */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+}

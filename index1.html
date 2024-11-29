@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="icon" href="img/title.ico" type="image/jpeg"> <!-- Usando JPEG como favicon -->
+</head>
+<body>
+    <!-- Encabezado -->  
+    <header class="header">
+        <div class="header-section">
+          <a href="#calculator"><img src="img/calculadora.png" alt="Icono 1" class="header-icon"><p class="icon-label">Calculator</p></a>
+        </div>
+        <div class="header-section">
+            <a href="#topics"><img src="img/topics.png" alt="Icono 2" class="header-icon"><p class="icon-label">Topics</p></a>
+        </div>
+        <div class="header-section">
+            <a href="#title-text"><img src="img/do.png" alt="Icono 3" class="header-icon"><p class="icon-label">What can I do?</p></a>
+        </div>
+      </header>
+
+    <!-- Calculator -->  
+    <div class="calculator" id="calculator">
+      <label for="screen-input">Pantalla de la Calculadora</label>
+      <input type="text" id="screen-input" class="screen" disabled>
+              <div class="buttons">
+          <button class="button" data-value="7">7</button>
+          <button class="button" data-value="8">8</button>
+          <button class="button" data-value="9">9</button>
+          <button class="button" data-value="/">÷</button>
+          <button class="button" data-value="4">4</button>
+          <button class="button" data-value="5">5</button>
+          <button class="button" data-value="6">6</button>
+          <button class="button" data-value="x">X</button>
+          <button class="button" data-value="1">1</button>
+          <button class="button" data-value="2">2</button>
+          <button class="button" data-value="3">3</button>
+          <button class="button" data-value="-">−</button>
+          <button class="button" data-value="0">0</button>
+          <button class="button" data-value="*">.</button>
+          <button class="button equal" data-value="equal">=</button>
+          <button class="button" data-value="+">+</button>
+          <button class="button advanced" data-value="^">xⁿ</button>
+          <button class="button advanced" data-value="sqrt">√</button>
+          <button class="button advanced" data-value="derivative">∂</button>
+          <button class="button clear" data-value="clear">C</button>
+        </div>
+      </div>
+    <!-- title of carousel -->  
+    <div class="title-carousel"><p>What can I do?</p></div>
+      
+      <!-- Carousel -->  
+      <div class="carousel" id="topics">
+        <button class="carousel-btn prev">⟨</button>
+        <div class="carousel-images" id="carousel-image">
+          <img src="img/poblacion.jpg" alt="Imagen 1" onclick="selectorImage(this)"  onfocus="selectorImage(this)">
+          <img src="img/phisyc.jpg" alt="Imagen 2" onclick="selectorImage2(this)"  onfocus="selectorImage2(this)">
+          <img src="img/economy.jpg" alt="Imagen 3" onclick="selectorImage3(this)"  onfocus="selectorImage3(this)">
+          <img src="img/criptografia.jpg" alt="Imagen 3" onclick="selectorImage4(this)" onfocus="selectorImage4(this)">
+        </div>
+        <button class="carousel-btn next">⟩</button>
+      </div>
+    <!-- title of carousel -->  
+     <br>
+    <div class="title-text"><p id="title-text">Click en la imagen para mas informacion.</p></div>
+
+
+    <!-- Footer -->
+<footer class="footer"> <!-- Define la sección del footer -->
+  <div class="footer-content"> <!-- Contenedor para el contenido del footer -->
+      <p>Proyecto final de HTML (intento de calculadora)<br>BY JARH</p> <!-- Texto dentro del footer -->
+  </div>
+</footer>
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+    <script src="javascript/wolframalpha.js"></script> <!-- Sin esto no funciona la integral -->
+
+
+    
+      <script src="javascript/carrusel.js"></script>
+      <script src="javascript/selector_imagen.js"></script>
+      <script src="javascript/calculadora.js"></script>
+     
+
+
+</body>
+</html>
